@@ -123,6 +123,14 @@ type Message struct {
 	Flags MessageFlags `json:"flags"`
 }
 
+func (msg *Message) getChannel(session Session) *Channel {
+	channel, err := session.Channel(msg.ChannelID)
+	if err != nil {
+		return nil
+	}
+	return channel
+}
+
 // MessageFlags is the flags of "message" (see MessageFlags* consts)
 // https://discord.com/developers/docs/resources/channel#message-object-message-flags
 type MessageFlags int

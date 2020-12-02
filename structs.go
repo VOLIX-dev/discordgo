@@ -303,6 +303,10 @@ func (c *Channel) Mention() string {
 	return fmt.Sprintf("<#%s>", c.ID)
 }
 
+func (c *Channel) send(text string, session *Session) (*Message, error) {
+	return session.ChannelMessageSend(c.ID, text)
+}
+
 // A ChannelEdit holds Channel Field data for a channel edit.
 type ChannelEdit struct {
 	Name                 string                 `json:"name,omitempty"`
