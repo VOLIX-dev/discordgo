@@ -4,6 +4,10 @@
 
 <img align="right" src="http://bwmarrin.github.io/discordgo/img/discordgo.png">
 
+
+This is a VOLIX fork of the original project discordgo
+
+
 DiscordGo is a [Go](https://golang.org/) package that provides low level 
 bindings to the [Discord](https://discord.com/) chat client API. DiscordGo 
 has nearly complete support for all of the Discord API endpoints, websocket
