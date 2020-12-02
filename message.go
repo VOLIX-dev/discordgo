@@ -123,7 +123,7 @@ type Message struct {
 	Flags MessageFlags `json:"flags"`
 }
 
-func (msg *Message) GetChannel(session Session) *Channel {
+func (msg *Message) GetChannel(session *Session) *Channel {
 	channel, err := session.Channel(msg.ChannelID)
 	if err != nil {
 		return nil
