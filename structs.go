@@ -303,7 +303,7 @@ func (c *Channel) Mention() string {
 	return fmt.Sprintf("<#%s>", c.ID)
 }
 
-func (c *Channel) send(text string, session *Session) (*Message, error) {
+func (c *Channel) Send(text string, session *Session) (*Message, error) {
 	return session.ChannelMessageSend(c.ID, text)
 }
 
