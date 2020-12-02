@@ -34,7 +34,7 @@ This assumes you already have a working Go environment, if not please see
 `go get` *will always pull the latest tagged release from the master branch.*
 
 ```sh
-go get github.com/bwmarrin/discordgo
+go get github.com/VOLIX-dev/discordgo
 ```
 
 ### Usage
@@ -42,7 +42,7 @@ go get github.com/bwmarrin/discordgo
 Import the package into your project.
 
 ```go
-import "github.com/bwmarrin/discordgo"
+import "github.com/VOLIX-dev/discordgo"
 ```
 
 Construct a new Discord client which can be used to access the variety of 
