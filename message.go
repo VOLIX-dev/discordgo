@@ -313,6 +313,15 @@ type MessageEmbed struct {
 	Fields      []*MessageEmbedField   `json:"fields,omitempty"`
 }
 
+// AddField add a field
+func (e *MessageEmbed) AddField(title string, content string, inline bool) {
+	e.Fields = append(e.Fields, &MessageEmbedField{
+		Name:   title,
+		Value:  content,
+		Inline: inline,
+	})
+}
+
 // EmbedType is the type of embed
 // https://discord.com/developers/docs/resources/channel#embed-object-embed-types
 type EmbedType string
